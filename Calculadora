@@ -1,0 +1,26 @@
+import customtkinter as ctk
+from tkinter import *
+
+tela_calc = ctk.CTk()
+
+tela_calc.title('Calculadora 1.0')
+tela_calc.geometry('600x300')
+ctk.set_appearance_mode('system')
+ctk.set_default_color_theme('dark-blue')
+
+def clique_botao_0():
+    print('0')
+
+def display(root) -> ctk.CTkEntry:
+    visor = ctk.CTkEntry(root)
+
+
+visor = ctk.CTkEntry(tela_calc, width=1400, height=40)
+visor.pack(padx=100, pady=10)
+
+botao_0 = ctk.CTkButton(tela_calc, text='0', command=clique_botao_0)
+botao_0.pack(padx=10, pady=10)
+
+
+
+tela_calc.mainloop()
